@@ -1,0 +1,10 @@
+Revision history for Perl extension Data::HashArray 
+	
+1.0	 Sat Jul 05 2008
+	- Changed the documentation to reflect the name change.
+	- Created test cases.
+	- First distribution on CPAN
+	
+0.20 Sat Jul 05 2008
+	- Created by copying from XML::Pastor::NodeArray (refactoring)
+

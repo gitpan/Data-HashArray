@@ -12,7 +12,7 @@ WriteMakefile(
     NAME          	=> 'Data::HashArray',
     VERSION_FROM	=> 'lib/Data/HashArray.pm',    
     ABSTRACT   		=> 'An array class of hashes that has magical properties via overloading and AUTOLOAD.',    
-    DISTNAME      	=> 'Data-HashArray',
+    DISTNAME      	=> 'dist/Data-HashArray',
     LICENSE			=> 'perl',
     AUTHOR        	=> 'Ayhan Ulusoy <dev@ulusoy.name>',
     EXE_FILES     	=> [],
@@ -39,7 +39,7 @@ package MY;
 sub libscan {
     my($self, $path) = @_;
     
-    if 	  ($path =~ /(\~|\.bak|\.old|\.orig)$/) 			{	return undef;	}    # Backups, old files
+    if 	  ($path =~ /(\~|\.bak|\.old|\.orig)$/) 	{	return undef;	}    # Backups, old files
     elsif ($path =~ /\.(\#|swp)$/) 					{	return undef;	}    # Temporaries & swap files.
     elsif ( ($path =~ /\b(RCS|CVS)\b/) 	||
     		($path =~ /\B\.svn\b/) 	   	||

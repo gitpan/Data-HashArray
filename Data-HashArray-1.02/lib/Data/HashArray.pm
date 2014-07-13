@@ -2,6 +2,7 @@
 #
 use strict;
 use warnings;
+no warnings qw(uninitialized);
 use utf8;
 
 package Data::HashArray;
@@ -12,7 +13,7 @@ use Data::Dumper;
 use Scalar::Util qw(reftype);
 
 use vars qw($VERSION);
-$VERSION = '1.0';
+$VERSION = '1.02';
 
 our $AUTOLOAD;
 
@@ -79,6 +80,9 @@ sub hash {
 		if (ref($field) eq 'CODE') {
 			# Field is a CODE refernce. Call it, with 'item' passed as an argument
 			$key = &$field($item);
+		} elsif (UNIVERSAL::can($item, $field)) {
+			# Field has an accessor. Call it  (the resukt should stringify to a hash key).
+			$key = $item->$field();
 		} else {
 			# Field should otherwise stringify to a hash key
 			$key = $item->{$field};

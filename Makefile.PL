@@ -12,7 +12,7 @@ WriteMakefile(
     NAME          	=> 'Data::HashArray',
     VERSION_FROM	=> 'lib/Data/HashArray.pm',    
     ABSTRACT   		=> 'An array class of hashes that has magical properties via overloading and AUTOLOAD.',    
-    DISTNAME      	=> 'dist/Data-HashArray',
+    DISTNAME      	=> 'Data-HashArray',
     LICENSE			=> 'perl',
     AUTHOR        	=> 'Ayhan Ulusoy <dev@ulusoy.name>',
     EXE_FILES     	=> [],

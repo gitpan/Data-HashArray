@@ -13,7 +13,7 @@ use Data::Dumper;
 use Scalar::Util qw(reftype);
 
 use vars qw($VERSION);
-$VERSION = '1.02';
+$VERSION = '1.03';
 
 our $AUTOLOAD;
 
